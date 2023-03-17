@@ -1,0 +1,19 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080" 
+      - "9990:9990" 
+      - "4447:4447" 
+      - "9999:9999" 
+      - "4446:4446" 
+      - "3873:3873" 
+      - "4445:4445"
+    networks:
+      internet:
+        aliases:
+          - jboss-as-61
+networks:
+    internet:
+        driver: bridge
